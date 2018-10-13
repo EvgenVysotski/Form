@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <title>HR APP</title>
+</head>
+
+<body style="display:none">
+    <div class="container">
+        <form>
+            <h1>CREATE PROFILE</h1>
+            <div class="inputInformation">
+                <div class="personalPhoto">
+                    <img src="media/default.jpg" id="image">
+                    <input type="file" name="photo" class="data" placeholder="Choose your photo" onchange="showImage.call(this)"
+                        required>
+                    <script>
+                        function showImage() {
+                            if (this.files && this.files[0]) {
+                                var obj = new FileReader();
+                                obj.onload = function (data) {
+                                    var image = document.querySelector("#image");
+                                    image.src = data.target.result;
+                                    image.classList.add("picture-visability");
+                                }
+                                obj.readAsDataURL(this.files[0])
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="personalInformation">
+                    <input type="text" name="name" class="data" placeholder="Enter your name" required>
+                    <input type="text" name="lastName" class="data" placeholder="Enter your lastname" required>
+                    <input type="text" name="phone" class="data" placeholder="Enter your phone number" id="phone"
+                        required>
+                </div>
+            </div>
+
+
+
+
+
+            <input type="submit" name="submit" class="send" value="Register">
+            <a href="login.html">Login</a>
+        </form>
+    </div>
+    <script src="smoothShifting.js"></script>
+
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="phoneMask.js"></script>
+</body>
+
+</html>

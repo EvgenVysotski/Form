@@ -68,3 +68,29 @@ input:invalid:not(:placeholder-shown) + .form__error {
 .send:hover {
     background-color: PowderBlue;
 }
+
+img {
+    border-radius: 50%;
+    /* height: 200px; */
+    height: 200px;
+    width: 200px;
+    border: 1px solid gray;
+}
+.picture-visability {
+    display: block;
+}
+.inputInformation {
+    display: flex;
+}
+.personalPhoto {
+    display: flex;
+    flex-direction: column;
+}
+input[type=file] {
+    border: none !important;
+
+}
+.personalInformation {
+    display: flex;
+    flex-direction: column;
+}
