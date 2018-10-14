@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HR APP</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body style="display:none">
+    <div class="container">
+        <form>
+            <h1>CREATE PROFILE</h1>
+            <div class="input-information">
+                <div class="personal-photo">
+                    <img src="media/default.jpg" id="image">
+                    <div class="file-upload">
+                        <label>
+                            <input type="file" name="photo" onchange="showImage.call(this)" required>
+                            <span>Upload photo</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="personal-information">
+                    <input type="text" name="name" class="data" placeholder="Enter your name" required>
+                    <input type="text" name="lastName" class="data" placeholder="Enter your lastname" required>
+                    <input type="text" name="phone" class="data" placeholder="Enter your phone number" id="phone"
+                        required>
+                </div>
+            </div>
+            <input type="submit" name="submit" class="send" value="Sign Up">
+            <a class="link" href="login.html">Back</a>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/smoothShifting.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
